@@ -134,8 +134,13 @@ class Library
   Library();
   ~Library();
 
+  /**
+   * Library is not a copiable object. However it can be moved.
+   */
   Library(const Library& ) = delete;
+  Library(Library&& );
   void operator=(const Library& ) = delete;
+  Library& operator=(Library&& );
 
   /**
    * Add a book to the library.

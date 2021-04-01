@@ -62,6 +62,10 @@ Library::Library()
 {
 }
 
+Library::Library(Library&& ) = default;
+
+Library& Library::operator=(Library&& ) = default;
+
 /* Destructor */
 Library::~Library()
 {
